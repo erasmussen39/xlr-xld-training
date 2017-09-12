@@ -65,15 +65,18 @@ xlr-training-simple-plugin-1.0.0.jar
 ```
 Adding this plugin to your tool is as simple as copying it to the `plugins` directory of the tool that the plugin is intended for. For example `/opt/xl-release/plugins`. After copying the file to the appropriate location, simply re-start the tool, and you will see the functionality within the corresponding tool that is implemented in your plugin.
 
-## XL Release Resources
+### XL Release Resources
 - [XL Release Main Documentation](https://docs.xebialabs.com/xl-release/)
 - [XL Release Concepts](https://docs.xebialabs.com/xl-release/concept/)
 - [XL Release Custom Tasks](https://docs.xebialabs.com/xl-release/how-to/create-custom-task-types.html)
 - [XL Release Rest API](https://docs.xebialabs.com/xl-release/latest/rest-api/)
 - [XL Release Jython API](https://docs.xebialabs.com/xl-release/latest/jython-api/index.html)
 
-## XL Deploy Resources
+### XL Deploy Resources
 - [XL Deploy Main Documentation](https://docs.xebialabs.com/xl-deploy/)
 - [XL Deploy Concepts](https://docs.xebialabs.com/xl-deploy/concept/)
 - [XL Deploy Custom Plugin](https://docs.xebialabs.com/xl-deploy/how-to/create-an-xl-deploy-plugin.html)
 - [XL Deploy Rest API](https://docs.xebialabs.com/xl-deploy/latest/rest-api/)
+
+### Git Resources
+- [Git Command Line](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)

@@ -1,7 +1,3 @@
-// Exported from:        http://shadow.hunyuk.org:5516/#/templates/Folder840512222-Release435561834/xfile
-// XL Release version:   7.1.0
-// Date created:         Tue Sep 12 14:43:38 MDT 2017
-
 xlr {
   release('XL_Release_Advanced_Plugin') {
     variables {
