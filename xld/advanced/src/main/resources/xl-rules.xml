@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+-->
+
+<rules xmlns="http://www.xebialabs.com/xl-deploy/xl-rules">
+	<rule name="advanced.ExecutedDeployment_CREATE" scope="deployed">
+		<conditions>
+			<type>advanced.ExecutedDeployment</type>
+			<operation>CREATE</operation>
+		</conditions>
+		<steps>
+			<os-script>
+				<order>10</order>
+                <description>Initial Advanced Deployment</description>
+				<script>scripts/create</script>
+			</os-script>
+		</steps>
+	</rule>
+    <rule name="advanced.ExecutedDeployment_MODIFY" scope="deployed">
+        <conditions>
+            <type>advanced.ExecutedDeployment</type>
+            <operation>MODIFY</operation>
+        </conditions>
+        <steps>
+            <os-script>
+                <order>10</order>
+                <description>Modify Advanced Deployment</description>
+                <script>scripts/modify</script>
+                <freemarker-context>
+                    <deployedApplication expression="true">deployedApplication</deployedApplication>
+                </freemarker-context>
+            </os-script>
+        </steps>
+    </rule>
+	<rule name="advanced.ExecutedDeployment_DESTROY" scope="deployed">
+		<conditions>
+            <type>advanced.ExecutedDeployment</type>
+			<operation>DESTROY</operation>
+		</conditions>
+		<planning-script-path>scripts/generate_destroy_plan.py</planning-script-path>
+	</rule>
+</rules>
