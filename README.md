@@ -1,10 +1,10 @@
 # XL Release/Deploy Plugin Training
-The intent of this repository is to give you the basic structure of plugins for both XL Release and XL Deploy, as well as a simple/advanced problem for each tool. In each case, you are given a problem statement. See below for links to resources that will help you in solving the described problems.
+The intent of this repository is to give you the basic plugin structure for both XL Release and XL Deploy, as well as a simple/advanced problem for each tool. In each case, you are given a problem statement. See below for links to resources that will help you in solving the described problems.
 
-- [XL Release Simple Plugin](xlr/simple/README.md)
-- [XL Release Advanced Plugin](xlr/advanced/README.md)
-- [XL Deploy Simple Plugin](xld/simple/README.md)
-- [XL Deploy Advanced Plugin](xld/advanced/README.md)
+- [XL Release Simple Plugin](xlr/simple/)
+- [XL Release Advanced Plugin](xlr/advanced/)
+- [XL Deploy Simple Plugin](xld/simple/)
+- [XL Deploy Advanced Plugin](xld/advanced/)
 
 ## Building/Packaging
 Each plugin can be built, packaged, and delivered to the corresponding tool in the exact same fashion. You will find the following directory structure under this repository:
@@ -66,9 +66,14 @@ xlr-training-simple-plugin-1.0.0.jar
 Adding this plugin to your tool is as simple as copying it to the `plugins` directory of the tool that the plugin is intended for. For example `/opt/xl-release/plugins`. After copying the file to the appropriate location, simply re-start the tool, and you will see the functionality within the corresponding tool that is implemented in your plugin.
 
 ## XL Release Resources
+- [XL Release Main Documentation](https://docs.xebialabs.com/xl-release/)
 - [XL Release Concepts](https://docs.xebialabs.com/xl-release/concept/)
 - [XL Release Custom Tasks](https://docs.xebialabs.com/xl-release/how-to/create-custom-task-types.html)
 - [XL Release Rest API](https://docs.xebialabs.com/xl-release/latest/rest-api/)
 - [XL Release Jython API](https://docs.xebialabs.com/xl-release/latest/jython-api/index.html)
 
 ## XL Deploy Resources
+- [XL Deploy Main Documentation](https://docs.xebialabs.com/xl-deploy/)
+- [XL Deploy Concepts](https://docs.xebialabs.com/xl-deploy/concept/)
+- [XL Deploy Custom Plugin](https://docs.xebialabs.com/xl-deploy/how-to/create-an-xl-deploy-plugin.html)
+- [XL Deploy Rest API](https://docs.xebialabs.com/xl-deploy/latest/rest-api/)
