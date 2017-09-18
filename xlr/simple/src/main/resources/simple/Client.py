@@ -10,11 +10,13 @@
 
 class Client(object):
     def __init__(self):
+        self.templateApi = templateApi
         return
 
     @staticmethod
-    def get_client():
-        return Client()
+    def get_client(templateApi):
+        return Client(templateApi)
 
-    def simple_exampletask(self, variables):
-        return {"output" : variables['example_property']}
+    def simple_findtemplate(self, variables):
+        print "templateApi : %s" % self.templateApi
+        return {"output" : variables['template_name']}

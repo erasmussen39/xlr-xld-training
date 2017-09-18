@@ -20,7 +20,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <property name="output" category="output" kind="string" size="large" description="The output returned from execution of the task."/>
     </type>
 
-    <type type="simple.ExampleTask" extends="simple.Task" label="Simple Example Task">
-        <property name="example_property" category="input" label="Example Property" required="true" description="An example property defined for my task."/>
+    <type type="simple.FindTemplate" extends="simple.Task" label="Find Template">
+        <property name="template_name" category="input" label="Template Name" required="true" description="The name of the XL Release Template to search for."/>
     </type>
 </synthetic>
