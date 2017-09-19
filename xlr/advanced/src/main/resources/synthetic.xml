@@ -20,7 +20,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <property name="output" category="output" kind="string" size="large" description="The output returned from execution of the task."/>
     </type>
 
-    <type type="advanced.ExampleTask" extends="advanced.Task" label="Advanced Example Task">
-        <property name="example_property" category="input" label="Example Property" required="true" description="An example property defined for my task."/>
+    <type type="advanced.CreateUATGates" extends="advanced.Task" label="Create UAT Gates">
+        <property name="variable_name" category="input" label="UAT Categories Variable" required="true" description="The variable that contains the list of UAT Categories to be added for this application."/>
     </type>
 </synthetic>

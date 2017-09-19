@@ -9,7 +9,7 @@
 #
 
 from advanced.Client import Client
-client = Client.get_client()
+client = Client.get_client(getCurrentRelease(), releaseApi, getCurrentPhase(), phaseApi, taskApi)
 method = str(task.getTaskType()).lower().replace('.', '_')
 call = getattr(client, method)
 response = call(locals())
