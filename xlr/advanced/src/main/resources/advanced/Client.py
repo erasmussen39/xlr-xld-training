@@ -18,3 +18,4 @@ class Client(object):
 
     def advanced_exampletask(self, variables):
         return {"output" : variables['example_property']}
+    
