@@ -20,5 +20,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <property name="output" category="output" kind="string" size="large" description="The output returned from execution of the task."/>
     </type>
 
-    <type type="simple.UpdateTitle" extends="simple.Task" label="Update Release Title"/>
+    <type type="simple.UpdateTitle" extends="simple.Task" label="Update Release Title">
+        <property name="commit_sha1" category="input" label="Commit sha1" required="true" description="The sha1 of the commit that triggered this build."/>
+    </type>
 </synthetic>

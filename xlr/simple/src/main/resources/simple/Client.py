@@ -19,10 +19,7 @@ class Client(object):
 
     def simple_updatetitle(self, variables):
         release_title = self.currentRelease.getTitle()
-        sha1 = ""
-        for tag in self.currentRelease.getTags():
-            if not tag.startsWith('Trigger') and tag.startsWith('Release'):
-                sha1 = tag
-        new_release_title = "%s - %s" % (release_title, sha1)
+        new_release_title = "%s - %s" % (release_title, variables['commit_sha1'])
         self.currentRelease.setTitle(new_release_title)
         self.releaseApi.updateRelease(self.currentRelease)
+        return {"output" : "SUCCESS"}
