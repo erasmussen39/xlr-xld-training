@@ -9,14 +9,20 @@
 #
 
 class Client(object):
-    def __init__(self):
-        self.templateApi = templateApi
-        return
+    def __init__(self, current_release, release_api):
+        self.currentRelease = current_release
+        self.releaseApi = release_api
 
     @staticmethod
-    def get_client(templateApi):
-        return Client(templateApi)
+    def get_client(current_release, release_api):
+        return Client(current_release, release_api)
 
-    def simple_findtemplate(self, variables):
-        print "templateApi : %s" % self.templateApi
-        return {"output" : variables['template_name']}
+    def simple_updatetitle(self, variables):
+        release_title = self.currentRelease.getTitle()
+        sha1 = ""
+        for tag in self.currentRelease.getTags():
+            if not tag.startsWith('Trigger') and tag.startsWith('Release'):
+                sha1 = tag
+        new_release_title = "%s - %s" % (release_title, sha1)
+        self.currentRelease.setTitle(new_release_title)
+        self.releaseApi.updateRelease(self.currentRelease)
