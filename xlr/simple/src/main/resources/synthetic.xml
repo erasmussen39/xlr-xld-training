@@ -23,4 +23,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <type type="simple.ExampleTask" extends="simple.Task" label="Simple Example Task">
         <property name="example_property" category="input" label="Example Property" required="true" description="An example property defined for my task."/>
     </type>
+
+    <type type="simple.AddGitHash" extends="simple.Task" label="Add Git Hash to Title">
+        <property name="GIT_HASH" category="input" label="GIT_HASH" required="true" description="The commit Hash from Git"/>
+    </type>
 </synthetic>

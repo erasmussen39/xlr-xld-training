@@ -8,13 +8,26 @@
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
+
 class Client(object):
-    def __init__(self):
-        return
+    def __init__(self, current_release, release_api):
+        self.current_release = current_release
+        self.release_api = release_api
+        return 
 
     @staticmethod
-    def get_client():
-        return Client()
+    def get_client(current_release, release_api):
+        return Client(current_release, release_api)
 
     def simple_exampletask(self, variables):
         return {"output" : variables['example_property']}
+
+    def simple_addgithash(self, variables):
+        git_hash = variables['GIT_HASH']
+        release_name = self.current_release.title
+        new_release_name = release_name + git_hash
+
+        #Update the name of the release here and submit via jython API
+        self.current_release.setTitle(new_release_name)
+        self.release_api.updateRelease(self.current_release)
+        return {"git_hash": git_hash, "new_release_name": new_release_name}
