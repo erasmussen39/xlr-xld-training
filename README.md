@@ -80,6 +80,7 @@ Adding this plugin to your tool is as simple as copying it to the `plugins` dire
 
 ### Plugin Resources
 - [XL Community Plugin Standards](http://xebialabs-community.github.io/)
+- [Plugin Creation Plugin](https://github.com/xebialabs-community/xlr-plugin-plugin)
 
 ### Git Resources
 - [Git Command Line](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
