@@ -30,9 +30,6 @@
                 <order>10</order>
                 <description>Modify Simple Deployment</description>
                 <script>scripts/modify</script>
-                <freemarker-context>
-                    <deployedApplication expression="true">deployedApplication</deployedApplication>
-                </freemarker-context>
             </os-script>
         </steps>
     </rule>
@@ -41,6 +38,15 @@
             <type>simple.ExecutedDeployment</type>
 			<operation>DESTROY</operation>
 		</conditions>
-		<planning-script-path>scripts/generate_destroy_plan.py</planning-script-path>
+        <steps>
+            <os-script>
+                <order>10</order>
+                <description>Undeploy Simple Deployment</description>
+                <script>scripts/destroy</script>
+                <!--<freemarker-context>
+                    <deployedApplication expression="true">deployedApplication</deployedApplication>
+                </freemarker-context>-->
+            </os-script>
+        </steps>
 	</rule>
 </rules>

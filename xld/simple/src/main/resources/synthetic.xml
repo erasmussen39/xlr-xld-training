@@ -9,11 +9,9 @@
 
     <type type="simple.ExecutedDeployment" deployable-type="simple.Deployment" extends="udm.BaseDeployedArtifact" container-type="simple.Container">
 		<generate-deployable type="simple.Deployment" extends="udm.BaseDeployableFolderArtifact" copy-default-values="true"/>
-        <property name="application_property" required="false" default="some_value" description="A property defined on the deployable."/>
+        <property name="foo_target" required="false" default="{{FOO_TARGET}}" description="Location to copy contents of foo."/>
+		<property name="bar_target" required="false" default="{{BAR_TARGET}}" description="Location to copy contents of bar."/>
 	</type>
 
-	<type type="simple.Container" extends="generic.Container" description="Simple Target Container">
-		<property name="container_property" required="false" default="another_value" description="A property defined on the container."/>
-	</type>
-
+	<type type="simple.Container" extends="generic.Container" description="Simple Target Container"/>
 </synthetic>
