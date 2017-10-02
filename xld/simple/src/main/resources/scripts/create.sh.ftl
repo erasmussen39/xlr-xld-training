@@ -5,3 +5,19 @@
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 echo "Initial Simple Deployment"
+
+if [ ! -d ${deployed.foo_target}/foo ]
+then
+    mkdir ${deployed.foo_target}/foo
+fi
+
+if [ ! -d ${deployed.bar_target}/bar ] 
+then
+    mkdir ${deployed.bar_target}/bar
+fi
+
+echo "Copying files to respective paths"
+cp ${deployed.file.path}/foo/* ${deployed.foo_target}/
+cp ${deployed.file.path}/bar/* ${deployed.bar_target}/
+
+
